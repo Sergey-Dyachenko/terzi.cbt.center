@@ -1,0 +1,20 @@
+.first-box {
+
+  @include e(content) {
+
+    & .first-text-box {
+      @include flex-basis(50%);
+    }
+
+    & .first-img-box {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-basis(50%);
+
+      @include e(img) {
+      }
+    }
+  }
+}

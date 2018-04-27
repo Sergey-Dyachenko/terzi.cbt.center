@@ -1,0 +1,47 @@
+.third-box {
+
+  @include e(content) {
+
+
+    & .third-img-box {
+      @include display(flex);
+
+      @include e(img) {
+      }
+    }
+
+    & .third-text-box {
+
+      @include e(title) {
+      }
+      @include e(text) {
+;
+
+        & p {
+
+          &:before {
+          }
+
+          &:nth-last-child(1) {
+          }
+        }
+      }
+      @include e(blockquote) {
+
+        & p {
+
+          &:before {
+          }
+        }
+
+        & footer {
+
+          & cite {
+          }
+        }
+      }
+      @include e(button) {
+      }
+    }
+  }
+}

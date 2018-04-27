@@ -1,0 +1,191 @@
+.first-box {
+  color: $white;
+  background: $black url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+
+  @include e(content) {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(stretch);
+    @include flex-basis(100%);
+    padding: 0 20px;
+
+    & .first-text-box {
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(stretch);
+      @include align-items(center);
+      @include flex-basis(100%);
+
+      @include e(text) {
+        font-size: 40px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin: 0 0 25px;
+
+      }
+      @include e(title) {
+        font-size: 35px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+        text-align: center;
+        margin: 0 0 15px;
+
+        & span {
+          font-size: 35px;
+          font-family: $lato;
+          font-weight: 700;
+          color: $yellowText;
+          text-align: center;
+        }
+      }
+      @include e(date) {
+        font-size: 20px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin: 0 0 15px;
+      }
+      @include e(button) {
+        font-size: 21px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background-color: $yellowText;
+        border-radius: 10px;
+        padding: 10px 15px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        outline: none;
+      }
+    }
+
+    & .first-img-box {
+      @include display(none);
+
+      @include e(img) {
+      }
+    }
+  }
+}
+#popup {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  @include align-content(stretch);
+  padding: 60px 30px;
+  background-color: $yellowText;
+
+  & #form {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-content(stretch);
+    @include flex-basis(100%);
+
+
+    & .form-group {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(stretch);
+      @include align-items(center);
+      width: 100%;
+      margin-bottom: 25px;
+
+
+      & label {
+        @include flex-basis(30%);
+        font-size: 14px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+        line-height: inherit;
+        padding: 15px 0 10px 15px;
+        background-color: $black;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        margin-bottom: 0;
+      }
+
+      & input {
+        @include flex-basis(70%);
+        font-size: 14px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $black;
+        line-height: inherit;
+        padding: 15px 0 10px 15px;
+        background-color: $white;
+        border-radius: 0 5px 5px 0;
+        border: none;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &::-webkit-input-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+        &::-moz-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+        &:-moz-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+        &:-ms-input-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+        &:focus::-webkit-input-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+        &:focus::-moz-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+        &:focus:-moz-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+        &:focus:-ms-input-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+      }
+    }
+    & button {
+      font-size: 21px;
+      font-family: $lato;
+      font-weight: 700;
+      color: $white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      background-color: $black;
+      border-radius: 10px;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin-bottom: 20px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+  }
+}
+div#fp-nav {
+  display: none;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background-color: $white !important;
+}

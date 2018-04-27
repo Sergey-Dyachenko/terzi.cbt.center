@@ -1,0 +1,51 @@
+.third-box {
+
+  @include e(content) {
+
+    & .third-img-box {
+
+      @include e(img) {
+      }
+    }
+
+    & .third-text-box {
+
+      @include e(title) {
+        font-size: 60px;
+
+      }
+      @include e(text) {
+
+        & p {
+          font-size: 24px;
+
+          &:before {
+          }
+
+          &:nth-last-child(1) {
+          }
+        }
+      }
+      @include e(blockquote) {
+
+        & p {
+          font-size: 24px;
+          padding-right: 50px;
+
+          &:before {
+            margin-right: 50px;
+          }
+        }
+
+        & footer {
+
+          & cite {
+            font-size: 24px;
+          }
+        }
+      }
+      @include e(button) {
+      }
+    }
+  }
+}

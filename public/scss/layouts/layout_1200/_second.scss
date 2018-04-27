@@ -1,0 +1,27 @@
+.second-box {
+
+
+  & .second-content-box {
+
+    @include e(title) {
+    }
+    @include e(text) {
+      width: 50%;
+
+      & p {
+
+        &:before {
+        }
+
+        &:nth-last-child(1) {
+        }
+      }
+    }
+
+    @include e(button) {
+    }
+
+    @include e(plan) {
+    }
+  }
+}

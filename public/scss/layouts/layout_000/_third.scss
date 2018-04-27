@@ -1,0 +1,123 @@
+.third-box {
+  color: $white;
+  background: $black url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+
+  @include e(content) {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(stretch);
+
+    & .third-img-box {
+      @include display(none);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-basis(50%);
+      margin-right: 50px;
+
+      @include e(img) {
+      }
+    }
+
+    & .third-text-box {
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-basis(50%);
+      @include flex-grow(1);
+      padding: 0 20px;
+      box-sizing: border-box;
+
+      @include e(title) {
+        font-size: 50px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin: 0 0 15px;
+      }
+      @include e(text) {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        margin-bottom: 25px;
+
+        & p {
+          font-size: 20px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: left;
+          margin: 0 0 10px;
+
+          &:before {
+            /*font-family: 'Font Awesome 5 Solid';
+            content: '\f111';*/
+            margin-right: 30px;
+            content: '◆';
+          }
+
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include e(blockquote) {
+        margin: 0 0 45px;
+
+        & p {
+          font-size: 20px;
+          font-family: $lato;
+          font-weight: 700;
+          font-style: italic;
+          color: $white;
+          text-align: left;
+          margin: 0 0 25px;
+
+          &:before {
+            content: '';
+            height: 58px;
+            width: 70px;
+            background: url(../img/quote.png) 50% 50% no-repeat;
+            float: left;
+            margin-right: 15px;
+          }
+        }
+
+        & footer {
+          float: right;
+
+          & cite {
+            font-size: 20px;
+            font-family: $lato;
+            font-weight: 700;
+            color: $white;
+          }
+        }
+      }
+      @include e(button) {
+        font-size: 21px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background-color: $yellowText;
+        border-radius: 10px;
+        padding: 10px 15px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        outline: none;
+      }
+      @include e(privacy) {
+        font-size: 10px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+      }
+    }
+  }
+}
