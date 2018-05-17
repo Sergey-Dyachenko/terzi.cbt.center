@@ -33,6 +33,10 @@ Route::get('/welcome', function(){
    return view ('welcome');
 });
 
+Route::post('/curl',
+    ['uses'=>'ClientsController@curl',
+        ]);
+
 //Route::get('import-export-view');
 Route::get('export', 'HomeController@export');
 

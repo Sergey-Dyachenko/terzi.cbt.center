@@ -26,7 +26,13 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        //
+
+    }
+
+    public function curl(Request $request)
+    {
+
+       dd($request->all());
     }
 
     /**
@@ -37,13 +43,14 @@ class ClientsController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $clients  = new Client;
         $clients->name = request('name');
         $clients->email = request('email');
         $clients->phone = request('phone');
         $clients->city = request('city');
-        $clients->company = "ЦБТ";
-        $clients->comments = "Вебинар Терзи Россия: Ваш пассивный доход";
+        $clients->company = request('company');
+        $clients->comments = request('comments');
         $clients->save();
         return redirect('/thanks');
     }
