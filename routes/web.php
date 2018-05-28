@@ -44,5 +44,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('ajax', function(){
+    return view('message');
+});
 
+Route::post('/getmsg', 'AjaxContreoller@index');
 

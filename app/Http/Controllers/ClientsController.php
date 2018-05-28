@@ -43,7 +43,7 @@ class ClientsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+       // dd($request->all());
         $clients  = new Client;
         $clients->name = request('name');
         $clients->email = request('email');
